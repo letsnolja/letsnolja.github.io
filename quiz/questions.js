@@ -2,10 +2,10 @@ questions = [
 {'text' : 'What colour is a NYC taxi ?',
 'possibilities' : ['Blue','Purple','Green','Yellow'],
 'answer' : 'Yellow'},
-{'text' : 'What falling object is said to have inspired Isaac Newton's theories about gravity ?',
+{'text' : "What falling object is said to have inspired Isaac Newton's theories about gravity ?",
 'possibilities' : ['Apple','Watermelon','Orange','Strawberry'],
 'answer' : 'Apple'},
-{'text' : 'Which word does the 'e' in 'e-mail' stand for ?',
+{'text' : "Which word does the 'e' in 'e-mail' stand for ?",
 'possibilities' : ['Egg','Electronic','English','Example'],
 'answer' : 'Electronic'},
 {'text' : 'Which software company produces Windows ?',
@@ -22,8 +22,5 @@ questions = [
 'answer' : 'Five'},
 {'text' : 'What school does Harry Potter go to ?',
 'possibilities' : ['Potter High School','Hogwarts School of Witchcraft and Wizardry','Hogwarts School of Wizards','Hogwarts High School'],
-'answer' : 'Hogwarts School of Witchcraft and Wizardry'},
-{'text' : 'What two colors are zebras ?',
-'possibilities' : ['White and grey','Yellow and pink','Black and white','Black and purple'],
-'answer' : 'Apple'},
+'answer' : 'Hogwarts School of Witchcraft and Wizardry'}
 ]
