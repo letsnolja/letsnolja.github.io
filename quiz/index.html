@@ -3,33 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Nolja | Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
   <body>
-
-  <style>
+    <style>
     #questionField {
-      border-style: solid;
-      border-width: thick;
-      border-color: rgb(170, 170, 255);
-      border-radius:5px;
       text-align: center;
-      background-color: rgb(255, 218, 230);
-      padding: 40px;
-      height: 400px;
       width: 60%;
       margin-left: 20%;
       margin-top: 5%;
     }
-  </style>
+    </style>
+    <div id='questionField'>
+      <v-app>
+          <v-btn @click='ctrlBtnHandler' id='controlBtn'>Start</v-btn>
+          <h5 id='scoreField'>Score : {{ score }}</h3>
+          <h3 id='textField'></h1>
+          <div id='btnField'></div>
+
+      </v-app>
+    </div>
 
     <script src='https://unpkg.com/vue'></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
     <script src='questions.js'></script>
-
-    <div id='questionField'>
-      <button @click='ctrlBtnHandler' id='controlBtn'>Start</button>
-      <p id='textField'>Why ?</p>
-      <div id='btnField'></div>
-    </div>
     <script src='index.js'></script>
   </body>
 </html>
