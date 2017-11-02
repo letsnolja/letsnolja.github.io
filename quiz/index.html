@@ -11,20 +11,19 @@
     <style>
     #questionField {
       text-align: center;
-      width: 60%;
-      margin-left: 20%;
-      margin-top: 5%;
     }
     </style>
     <div id='questionField'>
       <v-app>
-          <v-btn @click='ctrlBtnHandler' id='controlBtn'>Start</v-btn>
+          <v-btn color='primary' @click='ctrlBtnHandler' id='controlBtn'>Start</v-btn>
           <h5 id='scoreField'>Score : {{ score }}</h3>
           <h3 id='textField'></h1>
-          <div id='btnField'></div>
-
+          <div id='btnField'>
+            <v-btn color='primary' id='templateBtn' style='visibility : hidden'>Text Here</v-btn>
+          </div>
       </v-app>
     </div>
+
 
     <script src='https://unpkg.com/vue'></script>
     <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>

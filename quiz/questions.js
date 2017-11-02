@@ -23,6 +23,9 @@ function getQuestions () {
   'answer' : 'Five'},
   {'text' : 'What school does Harry Potter go to ?',
   'possibilities' : ['Potter High School','Hogwarts School of Witchcraft and Wizardry','Hogwarts School of Wizards','Hogwarts High School'],
-  'answer' : 'Hogwarts School of Witchcraft and Wizardry'}
+  'answer' : 'Hogwarts School of Witchcraft and Wizardry'},
+  {'text' : "What's Pi value ?",
+  'possibilities' : ['2.1415','3.14141414...','3.1415926...','3.1415929','I dunnot know im dumb dude'],
+  'answer' : '3.1415926...'}
   ]
 }

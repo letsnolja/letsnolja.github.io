@@ -1,6 +1,6 @@
 
 
-var questionFieldVue = new Vue({
+var app = new Vue({
   el: '#questionField',
   data: {
     questions: getQuestions(),
@@ -9,23 +9,25 @@ var questionFieldVue = new Vue({
   },
   methods: {
     ctrlBtnHandler : function () {
-      let el = document.getElementById('controlBtn');
       if (!this.ingame) {
         this.startQuiz()
-        el.firstChild.data = "Stop";
       } else {
         this.stopQuiz()
-        el.firstChild.data = "Start";
       }
     },
     startQuiz : function () {
       console.log('[*] Started Quiz')
+      let ctrlBtn = document.getElementById('controlBtn');
+      ctrlBtn.firstChild.firstChild.data = "Stop";
       this.score = 0
       this.ingame = true
+      this.questions = getQuestions()
       this.changeQuestion()
     },
     stopQuiz : function () {
       console.log('[*] Stopped Quiz')
+      let ctrlBtn = document.getElementById('controlBtn');
+      ctrlBtn.firstChild.firstChild.data = "Start";
       this.cleanTextField()
       this.cleanBtnField()
       this.questions = getQuestions()
@@ -49,42 +51,47 @@ var questionFieldVue = new Vue({
         this.finishedQuiz()
         return
       }
-      questionIndex = Math.floor(Math.random()*this.questions.length)
+      let questionIndex = Math.floor(Math.random()*this.questions.length)
       let q = this.questions[questionIndex]
       this.questions.splice(questionIndex, 1)
       document.getElementById('textField').innerHTML = q.text
       // Dynamically generate buttons
       let bF = document.getElementById('btnField')
       this.cleanBtnField()
-      for (i in q.possibilities) {
-        let btn = document.createElement("BUTTON");
-        let txt = document.createTextNode(q.possibilities[i]);
-        btn.appendChild(txt);
-        // Set up onclick with custom generated functions (currying)
-        btn.id = 'choice_'+i
-        btn.className = 'class="btn btn--raised'
-        btn.style.position = 'relative'
+      let poss = q.possibilities
+      while (poss.length > 0) {
+        let i = Math.floor(Math.random()*poss.length)
+        let p = poss[i]
+        poss.splice(i, 1)
+
+        let btn = this.templateBtn.cloneNode(true)
+        btn.firstChild.firstChild.data = p
+        btn.style.visibility = 'visible'
         btn.onclick = this.answeredWrapper(q,this)
+        btn.className = 'btn btn--raised primary'
         console.log(btn)
+
         bF.appendChild(btn);
-        bF.appendChild(document.createElement("BR"))
       }
     },
     finishedQuiz : function () {
       this.cleanBtnField()
       let tF = document.getElementById('textField')
       tF.innerHTML = 'Congrats you got <b>'+this.score+'</b>'
+      let ctrlBtn = document.getElementById('controlBtn');
+      ctrlBtn.firstChild.firstChild.data = "Restart";
+      this.ingame = false
     },
     answeredWrapper : function (q, vueInstance) {
       answered = function () {
-        if (this.textContent == q.answer) {
-          console.log(this.textContent+' is right !')
+        let text = this.firstChild.firstChild.data
+        if (text == q.answer) {
+          console.log(text+' is right !')
           vueInstance.score ++
           vueInstance.changeQuestion()
-
         } else {
-          console.log(this.textContent+' is wrong !')
-          this.style.visibility = 'hidden';
+          console.log(text+' is wrong ! Right answer : '+q.answer)
+          this.className = 'btn btn--disabled btn--raised primary'
           vueInstance.score --
         }
         console.log(vueInstance.score)
@@ -93,3 +100,6 @@ var questionFieldVue = new Vue({
     }
   }
 })
+let templateBtn =  document.getElementById('templateBtn')
+app.templateBtn = templateBtn
+document.getElementById('btnField').removeChild(templateBtn)
