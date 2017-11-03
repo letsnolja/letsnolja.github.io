@@ -14,6 +14,6 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 
 ## Javascript Librairies
 
-:books: VueJS
+:books: [VueJS](https://vuejs.org/)
 
-:books: Vuetify
+:books: [Vuetify](https://vuetifyjs.com/)
