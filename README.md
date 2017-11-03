@@ -4,7 +4,7 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 
 ## Avalaible Games
 
-:white_check_mark: (Quiz)[letsnolja.github.io/quiz/]
+:white_check_mark: [Quiz](https://letsnolja.github.io/quiz/)
 
 :clock3: Spot the differences
 
