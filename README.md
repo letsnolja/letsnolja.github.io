@@ -17,3 +17,10 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 :books: [VueJS](https://vuejs.org/)
 
 :books: [Vuetify](https://vuetifyjs.com/)
+
+## Contribute ?
+
+> Can I contribute ?
+
+:arrow_right: Sure ! Create an issue on the repo !
+
