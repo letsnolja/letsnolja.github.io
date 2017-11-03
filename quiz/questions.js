@@ -17,15 +17,18 @@ function getQuestions () {
   'answer' : 'Cinderella'},
   {'text' : 'What two colors are zebras ?',
   'possibilities' : ['White and grey','Yellow and pink','Black and white','Black and purple'],
-  'answer' : 'Black and white'},
+  'answer' : 'Black and white','White'},
   {'text' : 'You have eight sweets and you eat three. How many are left? ?',
-  'possibilities' : ['One','Five','Thirty','Two'],
-  'answer' : 'Five'},
+  'possibilities' : ['1','5','30','2','0'],
+  'answer' : '5'},
   {'text' : 'What school does Harry Potter go to ?',
   'possibilities' : ['Potter High School','Hogwarts School of Witchcraft and Wizardry','Hogwarts School of Wizards','Hogwarts High School'],
   'answer' : 'Hogwarts School of Witchcraft and Wizardry'},
   {'text' : "What's Pi value ?",
-  'possibilities' : ['2.1415','3.14141414...','3.1415926...','3.1415929','I dunnot know im dumb dude'],
-  'answer' : '3.1415926...'}
+  'possibilities' : ['2.1415','3.14141414...','3.1415926...','What is even Pi ???'],
+  'answer' : '3.1415926...'},
+  {'text' : "What's the best site ?",
+  'possibilities' : ["Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !","Let's Nolja !"],
+  'answer' : "Let's Nolja !"}
   ]
 }
