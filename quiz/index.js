@@ -87,7 +87,7 @@ var app = new Vue({
         let text = this.firstChild.firstChild.data
         if (text == q.answer) {
           console.log(text+' is right !')
-          vueInstance.score ++
+          vueInstance.score += 2
           vueInstance.changeQuestion()
         } else {
           console.log(text+' is wrong ! Right answer : '+q.answer)
