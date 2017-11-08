@@ -68,7 +68,7 @@ var app = new Vue({
         btn.firstChild.firstChild.data = p
         btn.style.visibility = 'visible'
         btn.onclick = this.answeredWrapper(q,this)
-        btn.className = 'btn btn--raised primary'
+        btn.className = 'btn btn--raised primary theme--dark deep-purple lighten-2'
         console.log(btn)
 
         bF.appendChild(btn);
