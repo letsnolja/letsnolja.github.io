@@ -8,11 +8,14 @@
     <div id='app'>
       <button @click='generateWord'>Gen</button>
       <p>
-        {{ currentW }}
+        {{ formatWord() }}
       </p>
-      <input placeholder="edit me" v-model='text' @input='getLetter'></input>
+      <input placeholder="Enter a letter" v-model='text' @input='getLetter'></input>
+    <div id='badLetters'> {{ badLetter() }}</div>
+    <p>{{ lifes }}</p>
     </div>
     <script src='https://unpkg.com/vue'></script>
     <script src="index.js" charset="utf-8"></script>
+    <script src="words.js" charset="utf-8"></script>
   </body>
 </html>
