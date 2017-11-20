@@ -14,14 +14,14 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 
 ## Who does what ?
 
-**Gaëtan** : 
+### Gaëtan 
 
 * VueJS & Vuetify
 * Javascript :
   * Quiz (+ 100 lines of code)
   * Hangman
 
-**Susie** : 
+### Susie : 
 
 * General aesthetic (Vuetify)
 * Quiz :
