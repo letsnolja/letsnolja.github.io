@@ -40,6 +40,14 @@ var app = new Vue({
           } else this.lifes--
         }
       }
+      let finished = true
+      for (let i in this.word) {
+        if (word[i].found == false) finished = false
+      }
+      if (finished == true) {
+        alert("YAY you won")
+        this.generateWord()
+      }
     },
     generateWord : function () {
       let item = items[Math.floor(Math.random()*items.length)];
@@ -49,7 +57,7 @@ var app = new Vue({
       }
       this.word = word
       this.badLetters = []
-      this.lifes = 5
+      this.lifes = (Object.size(this.word)/2).toFixed()
       console.log(item)
     },
     badLetter : function () {
@@ -57,3 +65,11 @@ var app = new Vue({
     }
   }
 })
+
+Object.size = function(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
