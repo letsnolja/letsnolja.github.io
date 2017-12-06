@@ -18,7 +18,7 @@ function getQuestions () {
   {'text' : 'What two colors are zebras ?',
   'possibilities' : ['White and grey','Yellow and pink','Black and white','Black and purple'],
   'answer' : 'Black and white'},
-  {'text' : 'You have eight sweets and you eat three. How many are left? ?',
+  {'text' : 'You have eight sweets and you eat three. How many are left?',
   'possibilities' : ['1','5','30','2','0'],
   'answer' : '5'},
   {'text' : 'What school does Harry Potter go to ?',

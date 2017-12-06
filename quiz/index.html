@@ -15,10 +15,10 @@
     </style>
     <div id='questionField'>
       <v-app>
-        <h4 style="color:rgb(158, 137, 255); background-color:rgba(158, 169, 255, 0.2)">Here are the game rules.Try to find the right answer to each question as fast as possible. If you choose the right answer, you win 2 points ! If you choose a wrong answer, you loose a point ! We wish you good luck !</h4>
+        <h4 style="color:rgb(158, 137, 255); background-color:rgba(158, 169, 255, 0.2)" class='display-2'>Here are the game rules.Try to find the right answer to each question as fast as possible. If you choose the right answer, you win 2 points ! If you choose a wrong answer, you loose a point ! We wish you good luck !</h4>
         <v-btn dark color='indigo lighten-2' @click='ctrlBtnHandler' id='controlBtn'>Start the game !</v-btn>
-        <h5 id='scoreField'>Score : {{ score }} points</h3>
-        <h3 id='textField'></h1>
+        <h5 id='scoreField' class='headline'>Score : {{ score }} points</h3>
+        <h3 id='textField' class='display-1'></h1>
         <div id='btnField'>
           <v-btn id='templateBtn' style='visibility : hidden'>Text Here</v-btn>
         </div>

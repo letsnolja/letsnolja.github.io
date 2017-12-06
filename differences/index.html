@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Nolja | Find the differences</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
+
   <body>
-    <h4 style="color:rgb(158, 137, 255); background-color:rgba(158, 169, 255, 0.2)">Here are the game rules. Try to find the differences between the two images as fast as possible. We wish you good luck !</h4>
+    <div id='app'>
+    <v-app>
+    <h4 style="color:rgb(158, 137, 255); background-color:rgba(158, 169, 255, 0.2)" class='display-2'>Here are the game rules. Try to find the differences between the two images as fast as possible. We wish you good luck !</h4>
 
     <img src="assets/unnamed66.jpg" usemap="#santaclaus">
     <map name="santaclaus">
@@ -81,6 +87,12 @@
       <area shape="poly" coords="392, 98, 429, 80, 470, 67, 475, 138, 428, 166" onclick="alert(6)">
 
     </map>
+
+    </v-app>
+    </div>
+    <script src='https://unpkg.com/vue'></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script src="index.js" charset="utf-8"></script>
 
   </body>
 </html>
