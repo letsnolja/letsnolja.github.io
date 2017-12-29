@@ -42,15 +42,34 @@
               <v-card-text>Work in progress...</v-card-text>
             </v-card>
           </v-flex>
+          <v-flex d-flex xs12>
+            <v-card color='secondary'>
+              <v-card-title primary class='title'>Github created by Susie & Gaëtan</v-card-title>
+              <v-card-text>This project has been created by Gaëtan & Susie as an OC Info project. In this github project the goal was to use Vuetify and VueJS which we did.</v-card-text>
+              <v-btn color='primary' href= 'http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs12>
+            <v-card color='secondary'>
+              <v-card-title primary class='headline'>Example of a self made Vuetify example</v-card-title>
+              <v-card-text>This is some text</v-card-text>
+              <v-card-actions>
+                <v-btn flat dark @click.native.stop="dialog = true">Open Dialog</v-btn>
+                <v-dialog v-model="dialog" max-width="290">
+                  <v-card>
+                    <v-card-title class="headline">This is a useless dialog</v-card-title>
+                    <v-card-text>Choose one useless option</v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn color="red darken-1" flat="flat" @click.native="dialog = false">Disagree</v-btn>
+                      <v-btn color="green darken-1" flat="flat" @click.native="dialog = false">Agree</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
         </v-layout>
-
-        <v-flex d-flex xs12>
-          <v-card color='secondary'>
-            <v-card-title primary class='title'>Github created by Susie & Gaëtan</v-card-title>
-            <v-card-text>This project has been created by Gaëtan & Susie as an OC Info project. In this github project the goal was to use Vuetify and VueJS which we did.</v-card-text>
-            <v-btn color='primary' href= 'http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
-          </v-card>
-      </v-flex>
       </v-container>
     </v-app>
   </div>
