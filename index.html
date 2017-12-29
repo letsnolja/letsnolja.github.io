@@ -9,51 +9,49 @@
   </head>
   <body>
   <div id='app'>
-    <v-app>
-<<<<<<< HEAD
-      <v-parallax src="imgs/blured.jpg" height=5000>
+    <v-app dark>
+      <v-parallax src="imgs/blured.jpg" height=200>
         <v-layout column align-center justify-center>
           <h1 class='white--text'>Let's Nolja</h1>
           <h2 class='white--text'>A game site about increasing knowledge and having fun</h1>
         </v-layout>
       </v-parallax>
-
-      <v-btn dark round color='indigo lighten-1' href='quiz/index.html' style="background: url('imgs/quiz.png');background-size : contain ; background-position : center top ;  height : 50%; background-repeat: no-repeat; width:25%;">
-        <h3 style='position: absolute; bottom: 0;' class='display-2'>Quiz</h3>
-      
-      </v-btn>
-
-      <v-btn dark round color='indigo lighten-1' href='hangman/index.html' style="background: url('imgs/hung.png'); background-size : contain ; background-position : center top ;  height : 50%; background-repeat: no-repeat; width:25%;">
-        <v-layout align-center>
-        <h3 style='position: absolute; bottom: 0;' class='display-2'>Hangman</h3>
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex d-flex xs3>
+            <v-card color="secondary">
+              <v-btn color='indigo lighten-1' href='hangman/index.html'>Hangman</v-btn>
+              <v-card-text>A game where you have to guess one word, by choosing letters. If these letters are in the word, you get another chances until you find the word. If you fail, you lose one life. If you lose all your lifes, you lose (obvious right ?).</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs3>
+            <v-card color="secondary">
+              <v-btn color='indigo lighten-1' href='quiz/index.html'>Quiz</v-btn>
+              <v-card-text>A quiz where you get asked all types of questions. From cultural ones to funny ones.</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs3>
+            <v-card color="secondary">
+              <v-btn color='indigo lighten-1' href='differences/index.html'>Find the differences</v-btn>
+              <v-card-text>A game where you have to find the differences between pictures.</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs3>
+            <v-card color="secondary">
+              <v-btn color='indigo lighten-1' href='sudoku/index.html'>Sudoku</v-btn>
+              <v-card-text>Work in progress...</v-card-text>
+            </v-card>
+          </v-flex>
         </v-layout>
-      </v-btn>
 
-      <v-btn dark round color='indigo lighten-1' href='sudoku/index.html' style="background: url('imgs/sudo.png'); background-size : contain ; background-position : center top ;  height : 50%; background-repeat: no-repeat; width:25%;">
-        <v-layout column align-center justify-center>
-        <h3 style='position: absolute; bottom: 0;' class='display-2'>Sudoku</h3>
-        </v-layout>
-      </v-btn>
-
-      <v-btn dark round color='indigo lighten-1' href='differences/index.html' style="background: url('imgs/loupe.png'); background-size : contain ; background-position : center top ;  height : 50%; background-repeat: no-repeat; width:25%;">
-        <v-layout column align-center justify-center>
-        <h3 style='position: absolute; bottom: 0;' class='display-2'>Differences</h3>
-        </v-layout>
-      </v-btn>
-
-      <v-btn round dark color='indigo lighten-1' href= 'http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
-=======
-      <h1 style="color:rgb(123, 185, 223); background-color:rgba(255, 235, 174, 0.2)">Let's Nolja is a game site about increasing knowledge and having fun</h1>
-      <br><br>
-      <v-btn round dark color='teal lighten-2' href='quiz/index.html'>Start a quiz !</v-btn>
-      <v-btn round dark color='teal lighten-2' href='hangman/index.html'>Start a hangman !</v-btn>
-      <v-btn round dark color='teal lighten-2' href='sudoku/index.html'>Start a sudoku !</v-btn>
-      <v-btn round dark color='teal lighten-2' href='differences/index.html'>Start a ' find the differences ' !</v-btn>
-      <v-carousel hide-controls>
-        <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
-      </v-carousel>
-      <v-btn round dark color='teal lighten-2' href='http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
->>>>>>> 7b756c4b805b8a71c1472bd7aa70dcafa8655f8c
+        <v-flex d-flex xs12>
+          <v-card color='secondary'>
+            <v-card-title primary class='title'>Github created by Susie & Gaëtan</v-card-title>
+            <v-card-text>This project has been created by Gaëtan & Susie as an OC Info project. In this github project the goal was to use Vuetify and VueJS which we did.</v-card-text>
+            <v-btn color='primary' href= 'http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
+          </v-card>
+      </v-flex>
+      </v-container>
     </v-app>
   </div>
   <script src='https://unpkg.com/vue'></script>
