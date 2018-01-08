@@ -18,7 +18,7 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 
 * VueJS & Vuetify
 * Javascript :
-  * Quiz (+ 100 lines of code)
+  * Quiz
   * Hangman
 
 ### Susie : 
