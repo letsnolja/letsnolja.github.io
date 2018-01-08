@@ -37,11 +37,11 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 * Finish quiz
 * Continue (maybe finish) Hangman
 
-:date: 29.10.2017 :
+:date: Later :
 * Finish Hangman
 * Continue (maybe finish) Differences
 
-:date: 6.11.2017 :
+:date: Later :
 * Finish Differences
 
 ## Javascript Librairies
