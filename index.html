@@ -8,7 +8,7 @@
     <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   </head>
   <body>
-    <v-app id='app' dark>
+    <v-app id='app'>
       <v-parallax src="imgs/blured.jpg" height=200>
         <v-layout column align-center justify-center>
           <h1 class='white--text'>Let's Nolja</h1>
@@ -19,26 +19,26 @@
         <v-layout row wrap>
           <v-flex d-flex xs3>
             <v-card>
-              <v-btn color='indigo lighten-1' href='hangman/index.html'>Hangman</v-btn>
+              <v-btn dark color='indigo lighten-1' href='hangman/index.html'>Hangman</v-btn>
               <v-card-text>A game where you have to guess one word, by choosing letters. If these letters are in the word, you get another chances until you find the word. If you fail, you lose one life. If you lose all your lifes, you lose (obvious right ?).</v-card-text>
             </v-card>
           </v-flex>
           <v-flex d-flex xs3>
             <v-card>
-              <v-btn color='indigo lighten-1' href='quiz/index.html'>Quiz</v-btn>
+              <v-btn dark color='indigo lighten-1' href='quiz/index.html'>Quiz</v-btn>
               <v-card-text>A quiz where you get asked all types of questions. From cultural ones to funny ones.</v-card-text>
             </v-card>
           </v-flex>
           <v-flex d-flex xs3>
             <v-card>
-              <v-btn color='indigo lighten-1' href='differences/index.html'>Find the differences</v-btn>
+              <v-btn dark color='indigo lighten-1' href='differences/index.html'>Find the differences</v-btn>
               <v-card-text>A game where you have to find the differences between pictures.</v-card-text>
             </v-card>
           </v-flex>
           <v-flex d-flex xs3>
             <v-card>
-              <v-btn color='indigo lighten-1' href='sudoku/index.html'>Sudoku</v-btn>
-              <v-card-text>Work in progress...</v-card-text>
+              <v-btn dark color='indigo lighten-1' href='sudoku/index.html'>Sudoku</v-btn>
+              <v-card-text>Coming in a while...</v-card-text>
             </v-card>
           </v-flex>
           <v-flex d-flex xs12>
@@ -50,14 +50,14 @@
           </v-flex>
           <v-flex d-flex xs12>
             <v-card>
-              <v-card-title primary class='headline'>Example of a self made Vuetify example</v-card-title>
-              <v-card-text>This is some text</v-card-text>
+              <v-card-title primary class='headline'>Have you ever wanted to change the website you're on's design ? ?</v-card-title>
+              <v-card-text>It is pretty easy with Vuetify </v-card-text>
               <v-card-actions>
-                <v-btn @click.native.stop="dialog = true">Open Dialog</v-btn>
+                <v-btn @click.native.stop="dialog = true">Click here</v-btn>
                 <v-dialog v-model="dialog" max-width="290">
                   <v-card>
-                    <v-card-title class="headline">This is a useless dialog</v-card-title>
-                    <v-card-text>Choose one useless option</v-card-text>
+                    <v-card-title class="headline">Change theme</v-card-title>
+                    <v-card-text>You can here choose one of theses two themes</v-card-text>
                     <v-card-actions>
                       <v-spacer></v-spacer>
                       <v-btn color='grey lighten-1' @click.native="switchStyle('light')">Light</v-btn>

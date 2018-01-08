@@ -1,29 +1,19 @@
-var app = new Vue({
+let app = new Vue({
   el: '#app',
   data: {
     text : '',
-    re : /[a-zA-Z]/,
-    word : '',
+    word : [],
     badLetters : [],
-    lifes : 0
+    lifes : 0,
+    started : false,
+    mask : 'a'
   },
   methods : {
-    formatWord : function () {
-      let out = ''
-      for (let i in this.word) {
-        out += (this.word[i].found) ? this.word[i].letter : '_'
-        out += '  '
-      }
-      return out
-    },
     getLetter : function () {
+      console.log(1)
+      if (this.text.length == 0) return
+      this.text = this.text[this.text.length - 1]
       let letter = this.text[0].toLowerCase()
-      this.text = ''
-      let m = letter.match(this.re)
-      if (m == null) {
-        console.log('Not a letter')
-        return
-      }
       let found = false
       for (let i in this.word){
           if(this.word[i].letter == letter) {
@@ -34,9 +24,15 @@ var app = new Vue({
       if (!found) {
         if (!this.badLetters.includes(letter)) {
           this.badLetters.push(letter)
-          if (this.lifes == 0) {
-            alert('You lost !')
-            this.generateWord()
+          if (this.lifes == 1) {
+            if (this.started) {
+              alert('You lost !')
+              this.generateWord()
+              return
+            } else {
+              alert('You didnt start the game !')
+              return
+            }
           } else this.lifes--
         }
       }
@@ -45,23 +41,25 @@ var app = new Vue({
         if (word[i].found == false) finished = false
       }
       if (finished == true) {
-        alert("YAY you won")
+        alert("You won !")
         this.generateWord()
       }
     },
+    clear : function () {
+      this.text = ''
+      document.getElementById('tf').value = ''
+    },
     generateWord : function () {
       let item = items[Math.floor(Math.random()*items.length)];
-      word = {}
+      word = []
       for (let i in item) {
-        word[i] = {found : false, letter : item[i]}
+        word[i] = {found : false, letter : item[i], index : i}
       }
       this.word = word
       this.badLetters = []
-      this.lifes = (Object.size(this.word)/2).toFixed()
+      this.lifes = (Object.size(this.word)).toFixed()
+      this.started = true
       console.log(item)
-    },
-    badLetter : function () {
-      return this.badLetters.join(' - ')
     }
   }
 })

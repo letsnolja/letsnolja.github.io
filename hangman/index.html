@@ -3,18 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>Nolja | Hangman</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id='app'>
-      <button @click='generateWord'>Gen</button>
-      <p>
-        {{ formatWord() }}
-      </p>
-      <input placeholder="Enter a letter" v-model='text' @input='getLetter'></input>
-    <div id='badLetters'> {{ badLetter() }}</div>
-    <p>{{ lifes }}</p>
-    </div>
+    <v-app id='app'>
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex d-flex xs12>
+            <v-card>
+              <v-btn @click='generateWord'>Start</v-btn>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs12>
+            <v-text-field label='Letter' placeholder="Enter a letter" v-model='text' @input="getLetter" id='tf'></input>
+          </v-flex>
+          <v-flex d-flex xs6>
+            <v-card>
+              <v-card-title class='headline'>Letters</v-card-title>
+              <v-breadcrumbs divider="/">
+                <v-breadcrumbs-item class='headline' v-for="l in word" :key="l.letter" :disabled='false'>
+                  {{ l.found ? l.letter : '_' }}
+                </v-breadcrumbs-item>
+              </v-breadcrumbs>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs2>
+            <v-card>
+              <v-card-title class='headline'>Lifes</v-card-title>
+              <v-card-text class='headline'>{{ lifes }}</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs4>
+            <v-card>
+              <v-card-title class='headline'>Wrong letters</v-card-title>
+              <v-card-text>
+                <v-breadcrumbs divider="/">
+                  <v-breadcrumbs-item class='title' v-for="bl in badLetters" :key="bl" :disabled='false'>
+                    {{ bl }}
+                  </v-breadcrumbs-item>
+                </v-breadcrumbs>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+  </v-app>
+
     <script src='https://unpkg.com/vue'></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
     <script src="index.js" charset="utf-8"></script>
     <script src="words.js" charset="utf-8"></script>
   </body>
