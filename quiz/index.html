@@ -8,23 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
   <body>
-    <style>
-    #questionField {
-      text-align: center;
-    }
-    </style>
-    <div id='questionField'>
-      <v-app dark>
-        <h4 class='display-2'>Here are the game rules.Try to find the right answer to each question as fast as possible. If you choose the right answer, you win 2 points ! If you choose a wrong answer, you loose a point ! We wish you good luck !</h4>
-        <v-btn color='indigo lighten-2' @click='ctrlBtnHandler' id='controlBtn'>Start the game !</v-btn>
-        <h5 id='scoreField' class='headline'>Score : {{ score }} points</h3>
-        <h3 id='textField' class='display-1'></h1>
-        <div id='btnField'>
-          <v-btn id='templateBtn' style='visibility : hidden'>Text Here</v-btn>
-        </div>
-        <img src="https://pbs.twimg.com/media/C2UG51zWQAANfkO.png" alt="quiz photo" width="450" height="253">
-      </v-app>
-    </div>
+    <v-app dark id='app'>
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex d-flex xs12>
+            <v-card>
+              <v-card-text class='display-1'>Here are the game rules. Try to find the right answer to each question as fast as possible. If you choose the right answer, you win 2 points ! If you choose a wrong answer, you lose one point ! We wish you good luck !</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs12>
+            <v-btn color='indigo lighten-2' @click='ctrlBtnHandler' id='controlBtn'>Start the game !</v-btn>
+          </v-flex>
+          <v-flex d-flex xs12>
+            <v-card>
+              <v-card-text id='scoreField' class='headline'>Score : {{ score }} points</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex d-flex xs12>
+            <v-card>
+              <v-card-text id='textField' class='display-1'>Click start !</v-card-text>
+              <div id='btnField'>
+                <v-btn id='templateBtn' style='visibility : hidden'>Text Here</v-btn>
+              </div>
+            </v-card>
+          </v-flex>
+          <img src="https://pbs.twimg.com/media/C2UG51zWQAANfkO.png" alt="quiz photo" width="450" height="253">
+        </v-layout>
+      </v-container>
+    </v-app>
 
 
     <script src='https://unpkg.com/vue'></script>

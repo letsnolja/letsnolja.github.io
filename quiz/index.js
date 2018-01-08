@@ -1,7 +1,7 @@
 
 
 var app = new Vue({
-  el: '#questionField',
+  el: '#app',
   data: {
     questions: getQuestions(),
     ingame : false,
