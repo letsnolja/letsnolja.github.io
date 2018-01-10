@@ -43,16 +43,15 @@
           </v-flex>
           <v-flex d-flex xs12>
             <v-card>
-              <v-card-title primary class='title'>Github created by Susie & Gaëtan</v-card-title>
+              <v-card-text primary class='title'>Github created by Susie & Gaëtan</v-card-text>
               <v-card-text>This project has been created by Gaëtan & Susie as an OC Info project. In this github project the goal was to use Vuetify and VueJS which we did.</v-card-text>
               <v-btn href= 'http://github.com/letsnolja/letsnolja.github.io/'>Github Repository</v-btn>
             </v-card>
           </v-flex>
           <v-flex d-flex xs12>
             <v-card>
-              <v-card-title primary class='headline'>Have you ever wanted to change the website you're on's design ? ?</v-card-title>
+              <v-card-text primary class='title'>Have you ever wanted to change the design of the website you're on ? </v-card-text>
               <v-card-text>It is pretty easy with Vuetify </v-card-text>
-              <v-card-actions>
                 <v-btn @click.native.stop="dialog = true">Click here</v-btn>
                 <v-dialog v-model="dialog" max-width="290">
                   <v-card>
@@ -65,7 +64,6 @@
                     </v-card-actions>
                   </v-card>
                 </v-dialog>
-              </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
