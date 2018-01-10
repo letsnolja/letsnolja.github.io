@@ -51,7 +51,17 @@
           </v-flex>
           <v-flex d-flex xs3>
             <v-card align-center fill-height>
-              <v-btn dark color='indigo lighten-1' href='sudoku/index.html'>Sudoku</v-btn>
+              <v-btn dark color='indigo lighten-1' @click='d2 = true'>Sudoku</v-btn>
+              <v-dialog v-model="d2" max-width="300">
+                <v-card>
+                  <v-card-title class="headline">Coming soon...</v-card-title>
+                  <v-card-text></v-card-text>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn flat dark color='green' @click.native="d2 = false">Okay</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
               <v-flex>
                 <img src="imgs/sudo.png" height="250px">
               </v-flex>

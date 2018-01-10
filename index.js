@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    dialog : false
+    dialog : false,
+    d2 : false
   },
   methods : {
     switchStyle : function (theme){
