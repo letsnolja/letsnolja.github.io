@@ -54,5 +54,5 @@ Nolja (놀자) means *Let's play* in korean :kr:.
 
 > Can I contribute ?
 
-:arrow_right: Sure ! Create an issue on the repo !
+:arrow_right: Sure ! Create an issue on the Github !
 
