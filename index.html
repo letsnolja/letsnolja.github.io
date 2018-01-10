@@ -10,35 +10,49 @@
   <body>
     <v-app id='app'>
       <v-parallax src="imgs/blured.jpg" height=200>
-        <v-layout column align-center justify-center>
+        <v-layout row wrap align-center>
+          <v-flex>
+            <img src="imgs/icon.png" alt="log" height="200px">
+            <img src="imgs/icon2.png" alt="log2" height="200px">
+          </v-flex>
+          <v-flex>
           <h1 class='white--text'>Let's Nolja</h1>
           <h2 class='white--text'>A game site about increasing knowledge and having fun</h1>
+          </v-flex>
         </v-layout>
       </v-parallax>
       <v-container grid-list-md text-xs-center>
-        <v-layout row wrap>
+        <v-layout row wrap >
           <v-flex d-flex xs3>
             <v-card>
               <v-btn dark color='indigo lighten-1' href='hangman/index.html'>Hangman</v-btn>
-              <v-card-text>A game where you have to guess one word, by choosing letters. If these letters are in the word, you get another chances until you find the word. If you fail, you lose one life. If you lose all your lifes, you lose (obvious right ?).</v-card-text>
-            </v-card>
+              <v-flex>
+                <img src="imgs/hangman.png" height="300px">
+              </v-flex>
+              </v-card>
           </v-flex>
           <v-flex d-flex xs3>
-            <v-card>
+            <v-card align-center fill-height>
               <v-btn dark color='indigo lighten-1' href='quiz/index.html'>Quiz</v-btn>
-              <v-card-text>A quiz where you get asked all types of questions. From cultural ones to funny ones.</v-card-text>
+              <v-flex>
+                <img src="imgs/quiz.png" width="200px">
+              </v-flex>
             </v-card>
           </v-flex>
           <v-flex d-flex xs3>
-            <v-card>
+            <v-card align-center fill-height>
               <v-btn dark color='indigo lighten-1' href='differences/index.html'>Find the differences</v-btn>
-              <v-card-text>A game where you have to find the differences between pictures.</v-card-text>
+              <v-flex>
+                <img src="imgs/Find-the-Differences.jpg" height="250px">
+              </v-flex>
             </v-card>
           </v-flex>
           <v-flex d-flex xs3>
-            <v-card>
+            <v-card align-center fill-height>
               <v-btn dark color='indigo lighten-1' href='sudoku/index.html'>Sudoku</v-btn>
-              <v-card-text>Coming in a while...</v-card-text>
+              <v-flex>
+                <img src="imgs/sudo.png" height="250px">
+              </v-flex>
             </v-card>
           </v-flex>
           <v-flex d-flex xs12>
