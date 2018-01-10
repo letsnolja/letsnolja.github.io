@@ -18,7 +18,7 @@ var app = new Vue({
         this.x = e.clientX
         this.y = e.clientY
         this.$nextTick(() => {
-          this.showMenu = true
+          this.showMenu = true //fonction show
         })
       }
     }

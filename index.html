@@ -9,8 +9,8 @@
   </head>
   <body>
     <v-app id='app'>
-      <v-parallax src="imgs/space.png" height=400>
-        <v-layout row wrap align-center text-xs-center>
+      <v-parallax src="imgs/space.png" height=400> <!-- 1 utiliser parallax->bouger image quand descend-->
+        <v-layout row wrap align-center text-xs-center> <!-- 2 ds parallax, mis images(icones) -->
           <v-flex>
             <img src="imgs/icon.png" alt="log" height="200px">
             <img src="imgs/icon2.png" alt="log2" height="200px">
@@ -26,7 +26,7 @@
       <v-container grid-list-md text-xs-center>
         <v-layout row wrap>
           <v-flex d-flex xs3>
-            <v-card>
+            <v-card> <!-- 3 v-card pr séparer-->
               <v-btn dark color='indigo lighten-1' href='hangman/index.html'>Hangman</v-btn>
               <v-flex>
                 <img src="imgs/hangman.png" height="300px">
@@ -68,14 +68,14 @@
             <v-card>
               <v-card-text primary class='title'>Have you ever wanted to change the design of the website you're on ? </v-card-text>
               <v-card-text>It is pretty easy with Vuetify </v-card-text>
-                <v-btn @click.native.stop="dialog = true">Click here</v-btn>
-                <v-dialog v-model="dialog" max-width="290">
+                <v-btn @click.native.stop="dialog = true">Click here</v-btn> <!-- bouton qui lance le dialogue -->
+                <v-dialog v-model="dialog" max-width="290"> <!-- ds v-dialog, afficher quand on clique -->
                   <v-card>
                     <v-card-title class="headline">Change theme</v-card-title>
                     <v-card-text>You can here choose one of theses two themes</v-card-text>
                     <v-card-actions>
                       <v-spacer></v-spacer>
-                      <v-btn color='grey lighten-1' @click.native="switchStyle('light')">Light</v-btn>
+                      <v-btn color='grey lighten-1' @click.native="switchStyle('light')">Light</v-btn> <!--bouton : fait changer couleur -->
                       <v-btn color='grey darken-1' @click.native="switchStyle('dark')">Dark</v-btn>
                     </v-card-actions>
                   </v-card>

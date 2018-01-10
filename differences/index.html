@@ -20,16 +20,17 @@
 		        </v-flex>
             <v-flex d-flex xs12>
               <v-card>
-                  <v-btn dark color='indigo lighten-2' @click.native.stop="dialog = true">Santa Claus</v-btn>
+                    <!-- ######################### -->
+                  <v-btn dark color='indigo lighten-2' @click.native.stop="dialog = true">Santa Claus</v-btn> <!-- 1 bouton ouvre dialogue -->
                   <v-dialog v-model="dialog">
                     <v-flex text-xs-center>
-                      <v-menu offset-y v-model="showMenu" absolute :position-x="x" :position-y="y">
+                      <v-menu offset-y v-model="showMenu" absolute :position-x="x" :position-y="y"> <!-- 3 ouvrir menu->ouvre contenu-->
                         <v-card>
                           <v-card-text><v-icon color='green'>check_circle</v-icon> You've found a difference !</v-card-text>
                         </v-card>
                       </v-menu>
                       <img src="assets/unnamed66.jpg" usemap="#santaclaus">
-                      <map name="santaclaus">
+                      <map name="santaclaus"> <!-- 2 map désigne des régions de l'image interactives, quand clique->lancer show -->
                         <area shape="circle" coords="796, 245, 36" @click="show">
                         <area shape="circle" coords="1090, 376, 19" @click="show">
                         <area shape="rect" coords="814, 512, 984, 552" @click="show">
@@ -39,7 +40,7 @@
 
                     </v-flex>
                   </v-dialog>
-
+                  <!-- ######################### -->
                   <v-btn dark color='indigo lighten-2' @click.native.stop="dialog2 = true">Under the sea</v-btn>
                   <v-dialog v-model="dialog2">
                     <v-flex text-xs-center>
